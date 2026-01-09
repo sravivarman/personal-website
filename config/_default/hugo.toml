@@ -6,11 +6,13 @@
 # website title
 title = "菠菜眾長"
 # Hostname (and path) to the root
-baseURL = "http://localhost:1313"
+baseURL = "https://sravivarman.github.io/personal-website/"
+
 # theme list
 # theme = ["FixIt"] # enable in your site config file
 # determines default content language ["en", "zh-cn", "fr", "pl", ...]
 defaultContentLanguage = "zh-cn"
+defaultContentLanguageInSubdir = false
 disableLanguages = ["en", "zh-tw"]
 # whether to include Chinese/Japanese/Korean
 hasCJKLanguage = true
