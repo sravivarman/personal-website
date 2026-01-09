@@ -1,8 +1,10 @@
 name: Hugo build and deploy
+
 on:
   schedule:
-    # Rebuid the site every day at 00:00 UTC to update the projects data
+    # Rebuild the site every day at 00:00 UTC
     - cron: '0 0 * * *'
+
   push:
     branches: [ main ]
     paths:
@@ -14,53 +16,52 @@ on:
       - 'themes/**'
       - 'go.mod'
       - 'go.sum'
+      - 'package.json'
+      - 'pnpm-lock.yaml'
+
   workflow_run:
     workflows: ['Update theme components']
     types:
       - completed
+
   workflow_dispatch:
+
+permissions:
+  contents: write   # REQUIRED for gh-pages deployment
+
 jobs:
-  Actions-Hugo-Deploy:
+  hugo-deploy:
     runs-on: ubuntu-latest
+
     steps:
-      - name: Check out repository code
-        uses: actions/checkout@v6
+      - name: Checkout repository
+        uses: actions/checkout@v4
         with:
-          ssh-key: ${{ secrets.SYNC_CONTENT }}
-          submodules: true # Fetch Hugo themes (true OR recursive)
-          fetch-depth: 0 # Fetch all history for .GitInfo and .Lastmod
-      
-      - uses: pnpm/action-setup@v4
+          submodules: true
+          fetch-depth: 0
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+
       - name: Setup Node.js
-        uses: actions/setup-node@v6
+        uses: actions/setup-node@v4
         with:
           node-version-file: .nvmrc
           cache: pnpm
+
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
       - name: Cache Hugo resources
-        uses: actions/cache@v5
-        env:
-          cache-name: cache-hugo-resources
+        uses: actions/cache@v4
         with:
           path: resources
-          key: ${{ env.cache-name }}
+          key: hugo-resources-${{ runner.os }}
 
-      - uses: actions/setup-go@v6
+      - name: Setup Go
+        uses: actions/setup-go@v5
         with:
-          go-version: "^1.20.0"
-      - run: go version
-
-      - name: Cache Go Modules
-        uses: actions/cache@v5
-        with:
-          path: |
-            ~/.cache/go-build
-            ~/go/pkg/mod
-          key: ${{ runner.os }}-go-${{ hashFiles('**/go.sum') }}
-          restore-keys: |
-            ${{ runner.os }}-go-
+          go-version: "^1.20"
 
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v3
@@ -68,7 +69,7 @@ jobs:
           hugo-version: ${{ vars.HUGO_VERSION || 'latest' }}
           extended: true
 
-      - name: Build
+      - name: Build Hugo site
         env:
           HUGO_PARAMS_GHTOKEN: ${{ secrets.HUGO_PARAMS_GHTOKEN }}
         run: pnpm build
@@ -76,39 +77,18 @@ jobs:
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
-          deploy_key: ${{ secrets.GP_DEPLOY_KEY }}
-          external_repository: Lruihao/lruihao.github.io
-          publish_branch: main
+          publish_branch: gh-pages
           publish_dir: ./public
-          user_name: 'Cell[bot]'
-          user_email: 'lrhx@users.noreply.github.com'
-          commit_message: ':rocket: ${{ github.event.head_commit.message }}'
-          force_orphan: false  # once a year
+          user_name: github-actions[bot]
+          user_email: github-actions[bot]@users.noreply.github.com
+          commit_message: ":rocket: Deploy Hugo site"
+          enable_jekyll: false
 
       - name: Update Algolia index
+        if: ${{ secrets.ALGOLIA_ADMIN_KEY != '' }}
         env:
           ALGOLIA_APP_ID: MTJNHU0JVB
           ALGOLIA_ADMIN_KEY: ${{ secrets.ALGOLIA_ADMIN_KEY }}
           ALGOLIA_INDEX_NAME: 'index'
           ALGOLIA_INDEX_FILE: './public/search.json'
         run: pnpm algolia
-
-      # - name: Install coscmd
-      #   run: sudo pip install coscmd
-
-      # - name: Configure coscmd
-      #   env:
-      #     COS_SECRET_ID: ${{ secrets.COS_SECRET_ID }}
-      #     COS_SECRET_KEY: ${{ secrets.COS_SECRET_KEY }}
-      #     COS_BUCKET_NAME: blog-1256932288
-      #     COS_BUCKET_REGION: ap-chengdu
-      #   run: coscmd config -a $COS_SECRET_ID -s $COS_SECRET_KEY -b $COS_BUCKET_NAME -r $COS_BUCKET_REGION
-
-      # - name: Deploy to COS Bucket
-      #   run: coscmd upload -r -s --delete -f public/ /
-
-      # - name: Refresh Qcloud CDN cache
-      #   env:
-      #     SECRET_ID: ${{ secrets.COS_SECRET_ID }}
-      #     SECRET_KEY: ${{ secrets.COS_SECRET_KEY }}
-      #   run: pnpm qcloudcdn
