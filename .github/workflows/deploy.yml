@@ -3,8 +3,19 @@ name: Hugo build and deploy (main branch)
 on:
   push:
     branches: [ main ]
+    # Prevent infinite deploy loops since output goes to repo root
     paths-ignore:
-      - 'docs/**'
+      - '*.html'
+      - 'tags/**'
+      - 'search/**'
+      - 'reward/**'
+      - 'shortcodes/**'
+      - 'sitemap.xml'
+      - 'robots.txt'
+      - 'service-worker*.js'
+      - 'site.webmanifest'
+      - 'search.json'
+
   workflow_dispatch:
 
 permissions:
@@ -47,25 +58,19 @@ jobs:
       - name: Build Hugo site
         run: pnpm build
 
-      - name: DEBUG – locate Hugo output
+      - name: DEBUG – confirm Hugo output
         run: |
-          echo "===== ROOT ====="
+          echo "===== ROOT CONTENT ====="
           ls -la
           echo ""
-          echo "===== public ====="
-          ls -la public || echo "public does not exist"
-          echo ""
-          echo "===== docs ====="
-          ls -la docs || echo "docs does not exist"
-          echo ""
-          echo "===== dist ====="
-          ls -la dist || echo "dist does not exist"
+          echo "Searching for index.html:"
+          find . -maxdepth 2 -name index.html
 
       - name: Deploy to GitHub Pages (main)
         uses: peaceiris/actions-gh-pages@v4
         with:
           publish_branch: main
-          publish_dir: ./docs
+          publish_dir: .
           keep_files: true
           user_name: github-actions[bot]
           user_email: github-actions[bot]@users.noreply.github.com
