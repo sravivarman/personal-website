@@ -1,41 +1,49 @@
 # -------------------------------------------------------------------------------------
-# Hugo Configuration
-# See: https://gohugo.io/configuration/all/
+# Hugo Configuration (GitHub Pages + FixIt)
 # -------------------------------------------------------------------------------------
 
-# website title
 title = "菠菜眾長"
-# Hostname (and path) to the root
-baseURL = "https://sravivarman.github.io/personal-website/"
 
-# theme list
-# theme = ["FixIt"] # enable in your site config file
-# determines default content language ["en", "zh-cn", "fr", "pl", ...]
+# IMPORTANT:
+# Use "/" for CI and GitHub Pages to avoid path issues
+baseURL = "/"
+
+# -----------------------------
+# Language configuration
+# -----------------------------
+
 defaultContentLanguage = "zh-cn"
 defaultContentLanguageInSubdir = false
 disableLanguages = ["en", "zh-tw"]
-# whether to include Chinese/Japanese/Korean
 hasCJKLanguage = true
-# copyright description used only for seo schema
-copyright = ""
-# whether to use robots.txt
+
+[languages]
+  [languages.zh-cn]
+    weight = 1
+    languageName = "简体中文"
+    contentDir = "content"
+
+# -----------------------------
+# Build / site behavior
+# -----------------------------
+
 enableRobotsTXT = true
-# whether to use git commit log
 enableGitInfo = true
-# whether to use emoji code
 enableEmoji = true
-# the main sections of a site
-# if set, the MainSections method on the Site object returns the given sections,
-# otherwise it returns the section with the most pages.
-# mainSections = ["posts"]
 buildDrafts = false
 summaryLength = 150
-titleCaseStyle = "ap"
-capitalizeListTitles = false
 timeZone = "Asia/Shanghai"
-# the editor to use when creating new content
-newContentEditor = "code"
-# ignore some build errors
+
+# -----------------------------
+# Theme
+# -----------------------------
+
+theme = ["FixIt"]
+
+# -----------------------------
+# Logging / ignored warnings
+# -----------------------------
+
 ignoreLogs = [
   "error-get-remote-image",
   "error-get-remote-json",
