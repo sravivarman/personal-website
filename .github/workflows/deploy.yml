@@ -61,6 +61,31 @@ jobs:
           HUGO_PARAMS_GHTOKEN: ${{ secrets.HUGO_PARAMS_GHTOKEN }}
         run: pnpm build
 
+    - name: DEBUG – locate Hugo output
+      run: |
+        echo "===== ROOT ====="
+        ls -la
+        echo ""
+        echo "===== public ====="
+        ls -la public || echo "public does not exist"
+        echo ""
+        echo "===== docs ====="
+        ls -la docs || echo "docs does not exist"
+        echo ""
+        echo "===== dist ====="
+        ls -la dist || echo "dist does not exist"
+
+- name: Deploy to GitHub Pages (main)
+  uses: peaceiris/actions-gh-pages@v4
+  with:
+    publish_branch: main
+    publish_dir: ./public   # (temporary, will fix after debug)
+    keep_files: true
+    enable_jekyll: false
+
+
+
+
       - name: Deploy to GitHub Pages (main)
         uses: peaceiris/actions-gh-pages@v4
         with:
