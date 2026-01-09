@@ -9,7 +9,7 @@ on:
     branches: [ main ]
     # IMPORTANT: prevent infinite deploy loop
     paths-ignore:
-      - 'public/**'
+      - 'docs/**'
 
   workflow_dispatch:
 
@@ -65,7 +65,7 @@ jobs:
         uses: peaceiris/actions-gh-pages@v4
         with:
           publish_branch: main
-          publish_dir: ./public
+          publish_dir: ./docs
           keep_files: true
           user_name: github-actions[bot]
           user_email: github-actions[bot]@users.noreply.github.com
