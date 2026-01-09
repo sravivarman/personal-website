@@ -1,20 +1,14 @@
 name: Hugo build and deploy (main branch)
 
 on:
-  schedule:
-    # Rebuild every day at 00:00 UTC
-    - cron: '0 0 * * *'
-
   push:
     branches: [ main ]
-    # IMPORTANT: prevent infinite deploy loop
     paths-ignore:
       - 'docs/**'
-
   workflow_dispatch:
 
 permissions:
-  contents: write   # REQUIRED to push to main
+  contents: write
 
 jobs:
   hugo-deploy:
@@ -39,12 +33,6 @@ jobs:
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
-      - name: Cache Hugo resources
-        uses: actions/cache@v4
-        with:
-          path: resources
-          key: hugo-resources-${{ runner.os }}
-
       - name: Setup Go
         uses: actions/setup-go@v5
         with:
@@ -53,38 +41,25 @@ jobs:
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v3
         with:
-          hugo-version: ${{ vars.HUGO_VERSION || 'latest' }}
+          hugo-version: latest
           extended: true
 
       - name: Build Hugo site
-        env:
-          HUGO_PARAMS_GHTOKEN: ${{ secrets.HUGO_PARAMS_GHTOKEN }}
         run: pnpm build
 
-    - name: DEBUG – locate Hugo output
-      run: |
-        echo "===== ROOT ====="
-        ls -la
-        echo ""
-        echo "===== public ====="
-        ls -la public || echo "public does not exist"
-        echo ""
-        echo "===== docs ====="
-        ls -la docs || echo "docs does not exist"
-        echo ""
-        echo "===== dist ====="
-        ls -la dist || echo "dist does not exist"
-
-- name: Deploy to GitHub Pages (main)
-  uses: peaceiris/actions-gh-pages@v4
-  with:
-    publish_branch: main
-    publish_dir: ./public   # (temporary, will fix after debug)
-    keep_files: true
-    enable_jekyll: false
-
-
-
+      - name: DEBUG – locate Hugo output
+        run: |
+          echo "===== ROOT ====="
+          ls -la
+          echo ""
+          echo "===== public ====="
+          ls -la public || echo "public does not exist"
+          echo ""
+          echo "===== docs ====="
+          ls -la docs || echo "docs does not exist"
+          echo ""
+          echo "===== dist ====="
+          ls -la dist || echo "dist does not exist"
 
       - name: Deploy to GitHub Pages (main)
         uses: peaceiris/actions-gh-pages@v4
@@ -96,12 +71,3 @@ jobs:
           user_email: github-actions[bot]@users.noreply.github.com
           commit_message: ":rocket: Deploy Hugo site"
           enable_jekyll: false
-
-      - name: Update Algolia index
-        if: ${{ secrets.ALGOLIA_ADMIN_KEY != '' }}
-        env:
-          ALGOLIA_APP_ID: MTJNHU0JVB
-          ALGOLIA_ADMIN_KEY: ${{ secrets.ALGOLIA_ADMIN_KEY }}
-          ALGOLIA_INDEX_NAME: 'index'
-          ALGOLIA_INDEX_FILE: './public/search.json'
-        run: pnpm algolia
