@@ -1,33 +1,20 @@
-name: Hugo build and deploy
+name: Hugo build and deploy (main branch)
 
 on:
   schedule:
-    # Rebuild the site every day at 00:00 UTC
+    # Rebuild every day at 00:00 UTC
     - cron: '0 0 * * *'
 
   push:
     branches: [ main ]
-    paths:
-      - 'assets/**'
-      - 'config/**'
-      - 'content/**'
-      - 'data/**'
-      - 'static/**'
-      - 'themes/**'
-      - 'go.mod'
-      - 'go.sum'
-      - 'package.json'
-      - 'pnpm-lock.yaml'
-
-  workflow_run:
-    workflows: ['Update theme components']
-    types:
-      - completed
+    # IMPORTANT: prevent infinite deploy loop
+    paths-ignore:
+      - 'public/**'
 
   workflow_dispatch:
 
 permissions:
-  contents: write   # REQUIRED for gh-pages deployment
+  contents: write   # REQUIRED to push to main
 
 jobs:
   hugo-deploy:
@@ -74,11 +61,12 @@ jobs:
           HUGO_PARAMS_GHTOKEN: ${{ secrets.HUGO_PARAMS_GHTOKEN }}
         run: pnpm build
 
-      - name: Deploy to GitHub Pages
+      - name: Deploy to GitHub Pages (main)
         uses: peaceiris/actions-gh-pages@v4
         with:
-          publish_branch: gh-pages
+          publish_branch: main
           publish_dir: ./public
+          keep_files: true
           user_name: github-actions[bot]
           user_email: github-actions[bot]@users.noreply.github.com
           commit_message: ":rocket: Deploy Hugo site"
