@@ -7,7 +7,7 @@
 identifier = "archives"
 pre = ""
 post = ""
-name = "文章"
+name = "Archives"
 url = "/archives/"
 title = ""
 weight = 1
@@ -21,7 +21,7 @@ identifier = "categories"
 parent = "archives"
 pre = ""
 post = ""
-name = "分类"
+name = "Categories"
 url = "/categories/"
 title = ""
 weight = 2
@@ -34,7 +34,7 @@ identifier = "collections"
 parent = "archives"
 pre = ""
 post = ""
-name = "合集"
+name = "Collections"
 url = "/collections/"
 title = ""
 weight = 3
@@ -47,7 +47,7 @@ identifier = "tags"
 parent = "archives"
 pre = ""
 post = ""
-name = "标签"
+name = "Tags"
 url = "/tags/"
 title = ""
 weight = 3
@@ -62,7 +62,7 @@ pre = '<img class="fixit-icon" src="https://fixit.lruihao.cn/images/hugo-fixit.w
 post = '<i class="fa-solid fa-external-link-alt fa-fw fa-xs text-secondary"></i>'
 name = "FixIt"
 url = "https://fixit.lruihao.cn/"
-title = "FixIt 官网"
+title = "FixIt"
 weight = 4
 
 [main.params]
@@ -72,9 +72,9 @@ divided = true
 identifier = "projects"
 pre = ""
 post = ""
-name = "开源"
+name = "Projects"
 url = "/projects/"
-title = "开源项目"
+title = "Projects"
 weight = 4
 
 [main.params]
@@ -85,9 +85,9 @@ icon = "fa-solid fa-lightbulb fa-shake"
 identifier = "friends"
 pre = ""
 post = ""
-name = "友链"
+name = "Friends"
 url = "/friends/"
-title = "友情链接"
+title = "Friends"
 weight = 5
 
 [main.params]
@@ -97,7 +97,7 @@ icon = "fa-solid fa-users"
 identifier = "reward"
 pre = ""
 post = ""
-name = "赞赏"
+name = "Rewards"
 url = "/reward/"
 title = ""
 weight = 6
@@ -109,7 +109,7 @@ icon = "fa-solid fa-hand-holding-dollar"
 identifier = "guestbook"
 pre = ""
 post = ""
-name = "留言"
+name = "Guest Book"
 url = "/guestbook/"
 title = ""
 weight = 7
@@ -123,7 +123,7 @@ pre = ""
 post = ""
 name = "RSS"
 url = "/index.xml"
-title = "通过 RSS 订阅"
+title = "RSS"
 weight = 8
 
 [main.params]
@@ -134,7 +134,7 @@ type = "desktop"
 identifier = "about"
 pre = ""
 post = ""
-name = "关于"
+name = "About"
 url = "/about/"
 title = ""
 weight = 100
@@ -146,7 +146,7 @@ icon = "fa-solid fa-quote-left"
 identifier = "github"
 pre = ""
 post = ""
-name = "关注 Follow"
+name = "Follow"
 url = "https://github.com/Lruihao/"
 title = ""
 weight = ""
