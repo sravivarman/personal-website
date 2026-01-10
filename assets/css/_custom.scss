@@ -27,14 +27,14 @@ $blog-bg-color: #fafaf8 !default;
     width: MAX(360px, 10%);
     height: 110px;
     pointer-events: none;
-    background-image: url(./images/drop.min.svg);
+    background-image: url(/images/drop.min.svg);
     transform: scaleX(-1);
     background-size: contain;
     background-position: top;
     background-repeat: no-repeat;
 
     [data-theme='dark'] & {
-      background-image: url(./images/drop-dark.min.svg);
+      background-image: url(/images/drop-dark.min.svg);
     }
   }
 
