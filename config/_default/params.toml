@@ -152,7 +152,7 @@ typeit = false
 # FixIt 0.2.12 | NEW Header subtitle config
 [header.subtitle]
 # subtitle name
-name = "李瑞豪的博客"
+name = "Personal Blog"
 # whether to use typeit animation for subtitle name
 typeit = false
 
@@ -279,7 +279,7 @@ avatarMenu = "about"
 # title shown in home page (HTML format is supported)
 title = "Lruihao's Note"
 # subtitle shown in home page (HTML format is supported)
-subtitle = "不怕萬人阻擋，只怕自己投降"
+subtitle = "Learn, While You Can..."
 # whether to use typeit animation for subtitle
 typeit = true
 # whether to show social links
@@ -470,7 +470,7 @@ name = "FixIt"
 # FixIt 0.2.12 | NEW PanguJS config
 [pangu]
 # For Chinese writing
-enable = true
+enable = false
 selector = "article" # FixIt 0.2.17 | NEW
 
 # FixIt 0.2.12 | NEW Watermark config
@@ -778,10 +778,10 @@ head = [
   "custom/page-style.html",
 ]
 menuDesktop = [
-  "inject/translate-menu-desktop.html",
+  "",
 ]
 menuMobile = [
-  "inject/translate-menu-mobile.html",
+  "",
 ]
 profile = [
   "custom/profile.html",
@@ -867,8 +867,8 @@ wordCount = true
 # FixIt 0.2.17 | NEW whether to enable readingTime
 readingTime = true
 # FixIt 0.2.17 | NEW end of post flag
-# endFlag = "（本文完）"
-endFlag = "「本文完，更多内容汇总在我的 GitHub，持续更新，求关注、求 star、求订阅！」"
+# endFlag = "（End of article）"
+endFlag = "This concludes the article！」"
 # FixIt 0.2.18 | NEW whether to enable instant.page
 instantPage = true
 # FixIt 0.3.0 | NEW whether to enable collection list at the sidebar
@@ -1292,7 +1292,7 @@ enable = true
 # Auto translation configuration
 # See: https://github.com/xnx3/translate/
 [autoTranslate]
-enable = true
+enable = false
 # The translation service provider, ['client.edge', 'translate.service']
 # See: https://translate.zvo.cn/43086.html
 # service = 'client.edge'

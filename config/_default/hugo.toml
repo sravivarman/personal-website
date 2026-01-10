@@ -1,8 +1,8 @@
 # -------------------------------------------------------------------------------------
-# Hugo Configuration (GitHub Pages + FixIt)
+# Hugo Configuration (GitHub Pages + FixIt) – English Only
 # -------------------------------------------------------------------------------------
 
-title = "菠菜眾長"
+title = "S Ravivarman"
 
 # IMPORTANT:
 # Use "/" for CI and GitHub Pages to avoid path issues
@@ -12,15 +12,15 @@ baseURL = "/"
 # Language configuration
 # -----------------------------
 
-defaultContentLanguage = "zh-cn"
+languageCode = "en-us"
+defaultContentLanguage = "en"
 defaultContentLanguageInSubdir = false
-disableLanguages = ["en", "zh-tw"]
-hasCJKLanguage = true
+hasCJKLanguage = false
 
 [languages]
-  [languages.zh-cn]
+  [languages.en]
     weight = 1
-    languageName = "简体中文"
+    languageName = "English"
     contentDir = "content"
 
 # -----------------------------
@@ -32,7 +32,7 @@ enableGitInfo = true
 enableEmoji = true
 buildDrafts = false
 summaryLength = 150
-timeZone = "Asia/Shanghai"
+timeZone = "Asia/Kolkata"
 
 # -----------------------------
 # Theme
