@@ -21,7 +21,7 @@ disableThemeInject = true
 # -------------------------------------------------------------------------------------
 [author]
 name = "S Ravivarman"
-avatar = "/images/avatar.jpg"
+avatar = "assets/images/avatar.jpg"
 
 # -------------------------------------------------------------------------------------
 # Header
