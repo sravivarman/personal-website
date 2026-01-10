@@ -1,12 +1,12 @@
 ---
-title: 友情链接
+title: Friends
 date: 2021-09-19T12:33:48+08:00
 layout: friends
-description: 「菠菜眾長」的友情链接
+description: Friendly Links
 keywords:
   - 'Hugo FixIt'
   - 'friends template'
-  - 友情链接
+  - Friendly Links
 ---
 
 {{< busuanzi_embed false "本页共 " >}}
