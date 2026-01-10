@@ -129,10 +129,10 @@ The following courses are part of my **current teaching assignment**.
 
 ## Institutional Experience
 
-- **Vasavi College of Engineering (VCE), Hyderabad**  
+- **Vardhaman College of Engineering (VCE), Hyderabad**  
 - **K.S. Rangasamy College of Technology (KSRCT), Tiruchengode**  
 - **Adhiyamaan College of Engineering (ACE), Hosur**  
-- **Muthayammal Engineering College (MEC), Tiruchengode**
+- **Mahendra Engineering College (MEC), Tiruchengode**
 
 ---
 
