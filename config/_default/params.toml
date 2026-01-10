@@ -1,30 +1,26 @@
 # -------------------------------------------------------------------------------------
-# FixIt Theme Parameters — English Only, GitHub Pages Safe
+# FixIt Params — Remote Features HARD DISABLED
 # -------------------------------------------------------------------------------------
 
 version = "0.4.X"
 description = "Personal Website"
-keywords = ["Personal", "Blog"]
+keywords = ["Personal", "Academic", "Portfolio"]
 defaultTheme = "auto"
 dateFormat = "2006-01-02"
-images = []
 enablePWA = false
-externalIcon = true
+externalIcon = false
 capitalizeTitles = true
 withSiteTitle = true
-titleDelimiter = "|"
-indexWithSubtitle = true
+indexWithSubtitle = false
 summaryPlainify = true
 enableTranslationMerge = false
-disableThemeInject = false
+disableThemeInject = true
 
 # -------------------------------------------------------------------------------------
 # Author
 # -------------------------------------------------------------------------------------
 [author]
 name = "S Ravivarman"
-email = ""
-link = ""
 avatar = "/images/avatar.jpg"
 
 # -------------------------------------------------------------------------------------
@@ -35,31 +31,13 @@ desktopMode = "sticky"
 mobileMode = "auto"
 
 [header.title]
-logo = "/logo.webp"
 name = "SRV"
-typeit = false
-
-[header.subtitle]
-name = "Personal Website"
-typeit = false
-
-# -------------------------------------------------------------------------------------
-# Breadcrumb
-# -------------------------------------------------------------------------------------
-[breadcrumb]
-enable = true
-sticky = true
-showHome = true
-separator = "/"
-capitalize = true
 
 # -------------------------------------------------------------------------------------
 # Footer
 # -------------------------------------------------------------------------------------
 [footer]
 enable = true
-copyright = true
-author = true
 since = 2024
 
 [footer.powered]
@@ -68,104 +46,59 @@ hugoLogo = true
 themeLogo = true
 
 # -------------------------------------------------------------------------------------
-# Home Page
+# Home
 # -------------------------------------------------------------------------------------
 [home.profile]
 enable = true
-avatarURL = "/images/avatar.jpg"
 title = "S Ravivarman"
 subtitle = "Personal Website"
-typeit = false
-social = true
+social = false
 
 [home.posts]
 enable = true
 paginate = 10
 
 # -------------------------------------------------------------------------------------
-# Social Links
-# -------------------------------------------------------------------------------------
-[social]
-GitHub = ""
-Linkedin = ""
-Email = ""
-RSS = true
-
-# -------------------------------------------------------------------------------------
-# Search (Fuse only – no Algolia, no remote calls)
+# Search — LOCAL ONLY
 # -------------------------------------------------------------------------------------
 [search]
 enable = true
 type = "fuse"
 
-[search.fuse]
-isCaseSensitive = false
-minMatchCharLength = 2
-threshold = 0.3
-distance = 100
-
 # -------------------------------------------------------------------------------------
-# Markdown / Page Behavior
+# Page
 # -------------------------------------------------------------------------------------
 [page]
 authorAvatar = true
-hiddenFromHomePage = false
-hiddenFromSearch = false
-hiddenFromRelated = false
-hiddenFromFeed = false
-twemoji = false
-lightgallery = false
-ruby = false
-fraction = false
-fontawesome = true
-linkToMarkdown = false
-linkToSource = false
-linkToEdit = false
-linkToReport = false
-linkToVscode = false
-pageStyle = "normal"
 wordCount = true
 readingTime = true
 instantPage = true
+lightgallery = false
 
-# -------------------------------------------------------------------------------------
-# TOC
-# -------------------------------------------------------------------------------------
 [page.toc]
 enable = true
 ordered = true
 startLevel = 2
 endLevel = 4
-position = "right"
 
 # -------------------------------------------------------------------------------------
-# Math (disabled)
-# -------------------------------------------------------------------------------------
-[page.math]
-enable = false
-
-# -------------------------------------------------------------------------------------
-# Comments (ALL disabled)
+# COMMENTS / ANALYTICS — DISABLED
 # -------------------------------------------------------------------------------------
 [page.comment]
 enable = false
 
-# -------------------------------------------------------------------------------------
-# Analytics (disabled)
-# -------------------------------------------------------------------------------------
 [analytics]
 enable = false
 
 # -------------------------------------------------------------------------------------
-# Image Processing
+# IMAGES — NO REMOTE
 # -------------------------------------------------------------------------------------
 [image]
 cacheRemote = false
 optimise = false
-blackList = []
 
 # -------------------------------------------------------------------------------------
-# Custom Partials (SAFE — NO project / translate injection)
+# CUSTOM PARTIALS — EMPTY (CRITICAL)
 # -------------------------------------------------------------------------------------
 [customPartials]
 head = []
@@ -183,39 +116,19 @@ postFooterBefore = []
 postFooterAfter = []
 
 # -------------------------------------------------------------------------------------
-# Theme Components — ALL SAFE
+# PROJECTS / TRANSLATION — HARD OFF
 # -------------------------------------------------------------------------------------
+[projectsAdapters]
+enable = false
+
+[autoTranslate]
+enable = false
+
+[pangu]
+enable = false
 
 [flyfish]
 enable = false
 
 [mDevtools]
 enable = false
-
-# -------------------------------------------------------------------------------------
-# Projects Adapter — HARD DISABLED
-# -------------------------------------------------------------------------------------
-[projectsAdapters]
-enable = false
-
-# -------------------------------------------------------------------------------------
-# Auto Translation — HARD DISABLED (CRITICAL)
-# -------------------------------------------------------------------------------------
-[autoTranslate]
-enable = false
-languages = []
-detectLocalLanguage = false
-enterprise = false
-
-# -------------------------------------------------------------------------------------
-# Pangu (Chinese typography) — disabled
-# -------------------------------------------------------------------------------------
-[pangu]
-enable = false
-
-# -------------------------------------------------------------------------------------
-# Developer
-# -------------------------------------------------------------------------------------
-[dev]
-enable = false
-c4u = false
