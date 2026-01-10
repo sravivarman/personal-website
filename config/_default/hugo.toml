@@ -6,7 +6,7 @@ title = "S Ravivarman"
 
 # IMPORTANT:
 # Use "/" for CI and GitHub Pages to avoid path issues
-baseURL = "/"
+baseURL = "https://sravivarman.github.io/personal-website/"
 
 # -----------------------------
 # Language configuration
