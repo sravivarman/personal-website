@@ -765,16 +765,15 @@ boxed = true
 # Depends on open custom blocks https://fixit.lruihao.cn/references/blocks/
 [customPartials]
 head = [
-  "inject/component-projects.html",
   "inject/fixit-docs-bookmark.html",
   "inject/shortcode-rewards.html",
   "custom/page-style.html",
 ]
 menuDesktop = [
-  "",
+  "custom/menu-desktop.html",
 ]
 menuMobile = [
-  "",
+  "custom/menu-mobile.html",
 ]
 profile = [
   "custom/profile.html",
@@ -793,7 +792,6 @@ assets = [
   "inject/cmpt-flyfish.html",
   "inject/cmpt-mdevtools.html",
   "inject/santa-hat.fixit.html",
-  "inject/cmpt-translate.html",
 ]
 postTocBefore = []
 postTocAfter = []
@@ -1265,7 +1263,7 @@ type = "eruda"
 # Content adapters config for component projects
 # https://github.com/hugo-fixit/component-projects
 [projectsAdapters]
-enable = true
+enable = false
 # Whether to show only public repos
 onlyPublic = true
 # Default categories and collections
