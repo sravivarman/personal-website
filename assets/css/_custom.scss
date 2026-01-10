@@ -28,7 +28,7 @@ $blog-bg-color: #fafaf8 !default;
     height: 110px;
     pointer-events: none;
     background-image: url(/images/drop.min.svg);
-    // 背景图水平翻转
+    // Background image flips horizontally
     transform: scaleX(-1);
     background-size: contain;
     background-position: top;
