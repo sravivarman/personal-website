@@ -769,12 +769,6 @@ head = [
   "inject/shortcode-rewards.html",
   "custom/page-style.html",
 ]
-menuDesktop = [
-  "custom/menu-desktop.html",
-]
-menuMobile = [
-  "custom/menu-mobile.html",
-]
 profile = [
   "custom/profile.html",
 ]
