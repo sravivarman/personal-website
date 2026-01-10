@@ -69,12 +69,12 @@ weight = 4
 divided = true
 
 [[main]]
-identifier = "projects"
+identifier = "courses"
 pre = ""
 post = ""
-name = "Projects"
-url = "/projects/"
-title = "Projects"
+name = "Courses"
+url = "/courses/"
+title = "Courses"
 weight = 4
 
 [main.params]
@@ -147,7 +147,7 @@ identifier = "github"
 pre = ""
 post = ""
 name = "Follow"
-url = "https://github.com/Lruihao/"
+url = "https://github.com/sravivarman/"
 title = ""
 weight = ""
 
