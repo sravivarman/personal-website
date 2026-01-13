@@ -4,13 +4,11 @@ This partial provides the API key and queries to the frontend JavaScript.
 
 For GitHub Pages: Set the API key in config.toml under [params.pexels]
   api_key = "your_pexels_api_key"
-
-For Vercel/Netlify: Use environment variables (PEXELS_API_KEY)
 */}}
 
 {{/* Get Pexels config from Hugo params */}}
 {{ $pexelsQueries := .Site.Params.pexels.queries }}
-{{ $pexelsApiKey := .Site.Params.pexels.api_key | default (getenv "PEXELS_API_KEY") }}
+{{ $pexelsApiKey := .Site.Params.pexels.api_key }}
 
 {{ if not $pexelsQueries }}
   {{ errorf "Pexels queries not configured in config.toml under [params.pexels.queries]" }}
