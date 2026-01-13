@@ -203,8 +203,12 @@ sectionPagesMenu = 'main'
 
 # Pexels Background Configuration
 # This section configures the random background images for the hero section
-# The API key is securely handled via environment variables (see comments above)
+# For GitHub Pages: Add your API key below
+# For Vercel/Netlify: Use PEXELS_API_KEY environment variable instead
 [params.pexels]
+  # Your Pexels API key (get one at https://www.pexels.com/api/)
+  api_key = "RQD4GSxKpJhrFhu6vWVfjokzFCT4tHn3qpmjLbXVtDteUolHdgQe4KBq"  # <-- ADD YOUR PEXELS API KEY HERE
+  
   # Image search queries for random background images
   # Customize this list to change the types of images that appear
   # The system will randomly select from these queries for each page loads
