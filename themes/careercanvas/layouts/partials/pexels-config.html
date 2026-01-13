@@ -41,14 +41,6 @@ SECURITY NOTE:
       const apiUrl = window.location.hostname === 'localhost' 
         ? 'http://localhost:3001/api/config' 
         : '/api/config';
-      
-      // Skip API call if on GitHub Pages (no serverless function support)
-      if (window.location.hostname.includes('github.io')) {
-        console.log('GitHub Pages detected - skipping API config, using fallback');
-        window.PEXELS_API_KEY = null; // No Pexels API on GitHub Pages
-        window.FORMSPREE_ENDPOINT = null; // No Formspree on GitHub Pages
-        return;
-      }
         
       const response = await fetch(apiUrl);
       if (response.ok) {
@@ -58,13 +50,9 @@ SECURITY NOTE:
         console.log('Configuration loaded securely');
       } else {
         console.warn('Failed to load configuration, using fallback');
-        window.PEXELS_API_KEY = null;
-        window.FORMSPREE_ENDPOINT = null;
       }
     } catch (error) {
       console.warn('Error loading configuration:', error);
-      window.PEXELS_API_KEY = null;
-      window.FORMSPREE_ENDPOINT = null;
     }
   }
 
