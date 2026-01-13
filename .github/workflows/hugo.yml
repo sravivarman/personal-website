@@ -35,11 +35,25 @@ jobs:
             https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_linux-amd64.deb
           sudo dpkg -i ${{ runner.temp }}/hugo.deb
 
+      # Node.js (required because PostCSS is triggered)
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      # ✅ THIS IS THE KEY FIX
+      # Install PostCSS locally so npx can find it
+      - name: Install PostCSS toolchain (local)
+        run: |
+          npm install postcss postcss-cli autoprefixer tailwindcss
+
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v5
 
       - name: Build with Hugo
+        env:
+          HUGO_ENVIRONMENT: production
         run: |
           hugo \
             --minify \
