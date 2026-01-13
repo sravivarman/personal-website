@@ -21,10 +21,10 @@ personal: >-
 quickfacts:
   - icon: "briefcase"
     title: "Current Role"
-    value: "🤖 AI and Full Stack Developer at <a href=\"https://fireraven.ai\" target=\"_blank\" rel=\"noopener noreferrer\"><strong>Fireraven</strong></a>"
+    value: "🤖 Professor, EEE at <a href=\"https://vardhaman.org\" target=\"_blank\" rel=\"noopener noreferrer\"><strong>Vardhaman College of Engineering</strong></a>"
   - icon: "graduation-cap"
     title: "Education"
-    value: "🏗️ <a href=\"https://uchile.cl/\" target=\"_blank\" rel=\"noopener noreferrer\">University of Chile</a>, **Bachelor's Degree in Civil Engineering**<br>🤖 <a href=\"https://lasallecollege.lcieducation.com/en\" target=\"_blank\" rel=\"noopener noreferrer\">Collège LaSalle Montréal</a>, **AEC: Artificial Intelligence and Machine Learning**"
+    value: "🏗️ <a href=\"https://uchile.cl/\" target=\"_blank\" rel=\"noopener noreferrer\">Anna University, Chennai</a>, **Ph.D in Electrical Engineering**<br>🤖 <a href=\"https://lasallecollege.lcieducation.com/en\" target=\"_blank\" rel=\"noopener noreferrer\">Collège LaSalle Montréal</a>, **AEC: Artificial Intelligence and Machine Learning**"
   - icon: "award"
     title: "Recent Achievement"
     value: "🏆 Recipient of the <a href=\"/blog/academic-excellence-recognition/\" target=\"_blank\" rel=\"noopener\">Academic Excellence Scholarship</a> 🎓 sponsored by ✈️ Air Canada at Collège LaSalle Montréal (2025) 🎉"

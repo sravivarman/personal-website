@@ -10,25 +10,6 @@ baseURL = "https://sravivarman.github.io/personal-website/"
 languageCode = "en-us"
 title = "S Ravivarman"
 theme = "careercanvas"
-defaultContentLanguage = "en"
-defaultContentLanguageInSubdir = false
-
-[languages]
-  [languages.en]
-    contentDir = "content/en"
-    languageName = "English"
-    weight = 1
-    [languages.en.params]
-      tagline = "Engineer. Coder. Problem Solver."
-      hero_description = "Structural engineer and full stack developer with 14+ years in Architecture, Engineering, and Construction (AEC), now specializing in AI/ML. Currently building security and compliance solutions for LLM-based AI agents at Fireraven."
-      hero_location = "Montréal, Canada"
-      collab_tags = [
-        "Full Stack Development",
-        "AI Security & Compliance",
-        "LLM-based Solutions",
-        "PostgreSQL & Data Pipelines",
-        "Agile Scrum"
-      ]
 
 [build]
   writeStats = true
@@ -38,17 +19,27 @@ name = "S. Ravivarman"
 email = "mail@sravivarman.com"
 profile_image = "/images/felipe-cordero-profile.jpg"
 author = "S. Ravivarman"
+tagline = "Engineer. Coder. Problem Solver."
+hero_description = "Electrical engineer and full stack developer with 18+ years in Architecture, Engineering, and Construction, now specializing in AI/ML and Data Science. Currently building security and compliance solutions for LLM-based AI agents at Fireraven."
+hero_location = "Hyderabad, India"
+collab_tags = [
+  "Power Electronics",
+  "AI Security & Compliance",
+  "LLM-based Solutions",
+  "PostgreSQL & Data Pipelines",
+  "Agile Scrum"
+]
 
 og_image = "images/sravivarman-og.png"
 
-description = "Structural engineer and full stack developer specializing in AI/ML. Building security and compliance solutions for LLM-based AI agents at Fireraven using Python, React, and modern web technologies."
+description = "Electrical engineer and full stack developer specializing in AI/ML. Building security and compliance solutions for LLM-based AI agents at Fireraven using Python, React, and modern web technologies."
 
 linkedin_url = "https://www.linkedin.com/in/sravivarman"
 linkedin_text = "linkedin.com/in/sravivarman"
 github_url = "https://github.com/sravivarman"
 github_text = "github.com/sravivarman"
 
-copyright = "© 2025 | S. Ravivarman"
+copyright = "S. Ravivarman"
 
 
 resume_url_en = "/files/Sravivarman_CV_English_version.pdf"
