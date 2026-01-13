@@ -188,15 +188,12 @@ sectionPagesMenu = 'main'
     # "structural long span bridges", "structural skycrapers", "astronomy nasa pictures",
     # "universe solar systems nasa pictures", "structural long span bridges",
     #"nebula nasa pictures",
-    "electrical engineering circuits", "electrical engineering technology", 
-    "electrical engineering design", "electrical engineering systems", 
-    "modern electrical engineering", "innovative electrical engineering", 
-    "advanced electrical engineering", "electrical engineering projects", 
-    "electrical engineering solutions", "electrical engineering concepts",
-    "electronics engineering", "power systems engineering", "control systems engineering",
-    "electronics design", "circuit design", "embedded systems", 
-    "electronics", "electrical grids", "renewable energy systems", "smart grids", "electrical infrastructure",
-    "electrical engineering innovations", "electrical engineering research", "electrical engineering development", 
-
-    
+    "electrical engineering circuits dark", "electrical engineering technology dark", 
+    "electrical engineering design dark", "electrical engineering systems dark", 
+    "modern electrical engineering dark", "innovative electrical engineering dark", 
+    "advanced electrical engineering dark", "electrical engineering concepts dark",
+    "power systems engineering dark", "control systems engineering dark",
+    "circuit design dark", "embedded systems dark", "electrical grids dark", "renewable energy systems dark", "smart grids dark", "electrical infrastructure dark",
+    "electrical engineering innovations dark", "electrical engineering research dark",
+    "electrical engineering development dark", 
   ]
