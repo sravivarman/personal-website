@@ -6,7 +6,7 @@
 # - Production: Environment variables injected via GitHub Actions
 # - See comments below for setup instructions
 #
-baseURL = "https://felipecordero.com"
+baseURL = "https://sravivarman.github.io/personal-website/"
 languageCode = "en-us"
 title = "Felipe Cordero"
 theme = "careercanvas"
