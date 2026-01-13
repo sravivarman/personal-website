@@ -1,6 +1,0 @@
-# -------------------------------------------------------------------------------------
-# Hugo Configuration
-# See: https://gohugo.io/configuration/all/
-# -------------------------------------------------------------------------------------
-
-baseURL = "https://sravivarman.github.io/personal-website/"

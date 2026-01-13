@@ -1,6 +1,0 @@
-{
-  "content/**/*.md": [
-    "autocorrect --fix",
-    "markdownlint-cli2 --fix"
-  ]
-}
