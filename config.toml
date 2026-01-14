@@ -179,6 +179,9 @@ sectionPagesMenu = 'main'
     # "structural long span bridges", "structural skycrapers", "astronomy nasa pictures",
     # "universe solar systems nasa pictures", "structural long span bridges",
     #"nebula nasa pictures",
-    "power systems engineering dark", "electrical grids dark", 
-    "renewable energy systems dark", "smart grids dark",     
+    "power systems engineering", "electrical grids", 
+    "renewable energy systems", "power electronics", 
+    "electrical substations", "high voltage engineering", 
+    "electrical transmission lines", "energy storage systems", "electric vehicles",
+    "solar power plants", "wind farms", "hydropower systems", 
   ]
