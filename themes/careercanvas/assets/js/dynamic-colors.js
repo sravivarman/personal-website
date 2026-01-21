@@ -203,36 +203,3 @@ window.DynamicColors = {
     getByName: ColorUtils.getPaletteByName,
     palettes: COLOR_PALETTES
 };
-
-// Debug function (remove in production)
-if (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') {
-    window.debugColors = {
-        list: () => console.table(COLOR_PALETTES),
-        current: () => console.log(window.currentColorPalette),
-        cycle: cycleColorPalette,
-        apply: (name) => {
-            const palette = ColorUtils.getPaletteByName(name);
-            if (palette) {
-                ColorUtils.applyColors(palette);
-                window.currentColorPalette = palette;
-            } else {
-                console.error(`Palette "${name}" not found`);
-            }
-        },
-        test: () => {
-            console.log('🎨 Testing color system...');
-            console.log('Available palettes:', COLOR_PALETTES.map(p => p.name));
-            console.log('Current palette:', document.documentElement.getAttribute('data-color-palette'));
-            console.log('Current primary color:', getComputedStyle(document.documentElement).getPropertyValue('--color-primary'));
-            console.log('Hugo palettes available:', window.HUGO_COLOR_PALETTES ? window.HUGO_COLOR_PALETTES.length : 'No');
-        },
-        forceRandom: () => {
-            const randomPalette = ColorUtils.getRandomPalette();
-            console.log('🎨 Forcing random palette:', randomPalette.name);
-            ColorUtils.applyColors(randomPalette);
-            window.currentColorPalette = randomPalette;
-        }
-    };
-    console.log('🎨 Dynamic Colors loaded! Use window.debugColors for testing');
-    console.log('🎨 Try: window.debugColors.test() or window.debugColors.forceRandom()');
-}
