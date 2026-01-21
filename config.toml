@@ -20,14 +20,15 @@ email = "mail@sravivarman.com"
 profile_image = "/images/felipe-cordero-profile.jpg"
 author = "S. Ravivarman"
 tagline = "Engineer. Coder. Problem Solver."
-hero_description = "Electrical engineer and full stack developer with 18+ years in Architecture, Engineering, and Construction, now specializing in AI/ML and Data Science. Currently building security and compliance solutions for LLM-based AI agents at Fireraven."
+hero_description = "I teach and write in the areas of electrical and electronics engineering, with a focus on power electronics, renewable energy systems, and applied engineering concepts. This site brings together my teaching approach, course work, ongoing writing, and selected projects developed through classroom practice and research."
 hero_location = "Hyderabad, India"
 collab_tags = [
   "Power Electronics",
-  "AI Security & Compliance",
-  "LLM-based Solutions",
-  "PostgreSQL & Data Pipelines",
-  "Agile Scrum"
+  "Motor Drives",
+  "Electric Vehicles",
+  "Energy Systems",
+  "Engineering Education",
+  "Data-Driven Modeling"
 ]
 
 og_image = "images/sravivarman-og.png"
