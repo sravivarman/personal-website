@@ -93,6 +93,19 @@
     border-color: var(--color-primary-light);
   }
 
+  /* Hero Blur Box - Dynamic color with transparency */
+  .hero-blur-box {
+    background: color-mix(in srgb, var(--color-primary) 80%, transparent);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+  }
+
+  .hero-blur-box-light {
+    background: color-mix(in srgb, var(--color-primary) 90%, transparent);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+  }
+
   /* Experience Timeline */
   .timeline-line {
     background: linear-gradient(to bottom, var(--color-second-light) 0%, var(--color-second) 50%, var(--color-second-light) 100%);
