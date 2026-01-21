@@ -2,46 +2,46 @@
 title: "Skills"
 type: "homepage"
 intro: >-
-  Combining 14+ years of structural engineering expertise with modern full-stack software development, specializing in Python, React, and AI/ML capabilities.
+  My work spans electrical and electronics engineering, teaching, and applied research, with emphasis on power electronics, energy systems, and engineering education. Alongside this, I engage with data-driven methods and web-based technical platforms that support learning, documentation, and research workflows.
 
 domains:
-  - icon: "code"
-    title: "Full Stack Development"
-    description: "Building scalable full-stack solutions with Python (FastAPI, NestJS) and React (Next.js, TypeScript), maintaining 50/50 backend/frontend split. Expertise in OOP principles, design patterns (DRY, YAGNI, SOLID), and microservices architecture."
+  - icon: "bolt"
+    title: "Electrical & Power Electronics Engineering"
+    description: "Strong foundation in electrical and electronics engineering with focus on power electronic converters, renewable energy systems, and electric vehicles. Experience in analysis, modeling, and design of DC–DC converters and energy conversion systems.."
     devicon_class: "devicon-python-plain colored"
 
-  - icon: "brain"
-    title: "AI Security & Compliance"
-    description: "Designing and developing security and compliance features for LLM-based agents. Building enterprise-grade solutions with regulatory compliance for financial applications, leveraging Generative AI technologies."
+  - icon: "flask"
+    title: "Simulation, Modeling & Experimental Validation"
+    description: "Experienced in simulation-based analysis of power electronic circuits and systems, with hands-on exposure to laboratory-scale prototyping, testing, measurement, and validation of theoretical and simulation results."
     devicon_class: "devicon-tensorflow-original colored"
 
-  - icon: "database"
-    title: "Database & Data Management"
-    description: "Implementing and optimizing PostgreSQL database schemas, queries, and data pipelines. Handling complex relationships and ensuring regulatory compliance for financial-grade applications."
+  - icon: "chalkboard-teacher"
+    title: "Engineering Education & Teaching Practice"
+    description: "Experienced in teaching core and advanced electrical engineering courses with emphasis on conceptual clarity, problem formulation, and application-oriented learning. Skilled in converting classroom discussions into structured learning material."
     devicon_class: "devicon-postgresql-plain colored"
 
-  - icon: "tools"
-    title: "Engineering Expertise"
-    description: "Applying structural engineering knowledge with modern technology to create innovative solutions for complex engineering challenges."
+  - icon: "users"
+    title: "Project Guidance & Student Mentoring"
+    description: "Guided undergraduate and postgraduate student projects involving simulation, design, and implementation in power electronics, renewable energy systems, electric vehicles, and applied engineering applications."
     devicon_class: "devicon-docker-plain colored"
 
-  - icon: "users"
-    title: "Agile Collaboration & Leadership"
-    description: "Collaborating with global distributed teams in Agile Scrum environments. Leading cross-functional teams in R&D and software development, managing complex projects, and coordinating multidisciplinary initiatives."
+  - icon: "chart-line"
+    title: "Data-Driven Engineering & Computational Methods"
+    description: "Exploring data science methods for modeling, analysis, and optimization of engineering systems. Interested in integrating statistical and data-driven approaches with traditional analytical methods in engineering research and applications."
     devicon_class: "devicon-github-original colored"
 
-  - icon: "lightbulb"
-    title: "Business & Strategy"
-    description: "Developing innovation strategies and preparing comprehensive documentation for tech-driven solutions, including investment proposals exceeding $500K USD."
+  - icon: "code"
+    title: "Web Development & Academic Platforms"
+    description: "Experienced in designing and developing web-based platforms to support teaching, documentation, and project workflows. Comfortable with static and dynamic site architectures, content management systems, and backend–frontend integration for academic use."
     devicon_class: "devicon-react-original colored"
 
-  - icon: "globe"
-    title: "International Experience"
-    description: "Native Spanish speaker with IELTS C1 English proficiency and TCF B2 French, enabling effective communication in diverse international settings and global distributed teams."
+  - icon: "file-alt"
+    title: "Technical Writing & Documentation"
+    description: "Experienced in preparing research papers, technical reports, project documentation, and instructional content. Skilled in explaining complex engineering concepts clearly through structured writing and visual representations."
     devicon_class: "devicon-html5-plain colored"
 
   - icon: "hands-helping"
-    title: "Community & Learning"
-    description: "Active in volunteer work and professional development, including structural assessment for disaster relief and student welcome programs. Recipient of Academic Excellence Scholarship at Collège LaSalle Montréal."
+    title: "Academic Collaboration & Research Development"
+    description: "Collaborative experience working with students, faculty, and researchers in academic environments. Actively developing research ideas and problem statements aligned with funded project frameworks and interdisciplinary research directions."
     devicon_class: "devicon-javascript-plain colored"
 ---

@@ -3,47 +3,41 @@ title: "About"
 type: "homepage"
 featured_image: "/images/felipe-cordero-profile.jpeg"
 intro: >-
-  Hi! I'm Felipe Cordero, a **structural engineer** 🏗️ and **full stack developer** 💻 with **14+ years** in AEC and software development, now specializing in **AI/ML** 🤖. My journey has taken me from **Chile to Montréal**, where I combine traditional engineering with modern technology to solve complex problems in engineering and automation. Currently, I'm an **AI and Full Stack Developer** at <a href="https://fireraven.ai" target="_blank" rel="noopener noreferrer"><strong>Fireraven</strong></a>, building security and compliance solutions for LLM-based AI agents. Recently, I was honored with the **Academic Excellence Scholarship** (Air Canada, Collège LaSalle Montréal, 2025) 🏆 for my achievements in AI/ML studies.
+  Hi! I'm Ravivarman Shanmugasundaram, a **electrical and electronics engineer** and educator engaged in teaching, applied research, and academic development. My work focuses on power electronics, renewable energy systems, and engineering education, with an emphasis on connecting fundamental concepts to real engineering applications ⚡🔌.
 
 study: >-
-  Currently based in **Montréal** 🇨🇦, I'm deepening my skills in **Artificial Intelligence and Machine Learning** 🤖 at **Collège LaSalle**. I work with **Python** 🐍, **PyTorch**, and **predictive modeling** 📊 to build intelligent systems that bridge the gap between engineering and data science.
+  I currently serve as a Professor in the Department of Electrical and Electronics Engineering at Vardhaman College of Engineering 🎓. My academic background includes doctoral research in power electronics, along with sustained experience in classroom teaching, simulation-based analysis, and project-oriented learning..
 
-passion_title: "What I'm passionate about"
+passion_title: "Current Focus"
 passion_text: >-
-  I'm passionate about learning and applying **AI to real-world engineering challenges** 🔬. At <a href="https://fireraven.ai" target="_blank" rel="noopener noreferrer"><strong>Fireraven</strong></a>, I design and develop **scalable full-stack solutions** using **Python (FastAPI, NestJS)** and **React (Next.js, TypeScript)** for LLM-based security and compliance platforms, maintaining a **50/50 split between backend and frontend development** ⚖️. I implement and optimize **PostgreSQL databases**, apply **OOP principles and design patterns (DRY, YAGNI, SOLID)** to build maintainable codebases, and collaborate with **global distributed teams** in Agile Scrum environments 🤝. Previously at <a href="https://obralink.com" target="_blank" rel="noopener noreferrer"><strong>ObraLink</strong></a>, I led the development of **autonomous structural analysis tools** and **ML models** for concrete estimation 🏢. My goal is to create **innovative solutions** that have a real impact on the built environment.
+  At present, my focus is on developing research ideas and problem statements aligned with funded project frameworks in power electronics and energy systems 💡, while also exploring data science methods for modeling, analysis, and optimization of engineering systems 📊. These efforts support interdisciplinary approaches that combine traditional engineering analysis with data-driven perspectives.
 
 mix: >-
-  With experience in both **structural engineering** 🏗️ and **software development** 💻, I bring a **unique perspective** to technical challenges. I've led teams in building everything from **physical structures to scalable software systems**, always focusing on **practical, efficient solutions** ⚡. My **international background** and commitment to **continuous learning** drive me to bridge disciplines and deliver value across industries.
-
-personal: >-
-  Outside work, I enjoy **tennis** 🎾, **cooking** 👨‍🍳, **drums** 🥁, **swimming** 🏊‍♂️, and **photography** 📸. I also **volunteer at LaSalle College**, helping new students settle in and supporting the academic community 🤝.
+  Alongside teaching and research, I actively design and maintain web-based academic platforms for course material, writing, and project organization 💻. These systems support learning workflows, documentation, and long-term academic use in teaching and research contexts.
+  
+  I value clarity, simplicity, and practical relevance in both teaching and research 🧭. Continuous learning, reflective practice, and interdisciplinary exploration shape my approach to engineering education and academic work.
 
 quickfacts:
   - icon: "briefcase"
     title: "Current Role"
-    value: "🤖 Professor, EEE at <a href=\"https://vardhaman.org\" target=\"_blank\" rel=\"noopener noreferrer\"><strong>Vardhaman College of Engineering</strong></a>"
+    value: "👨‍🏫 Professor, EEE at <a href=\"https://vardhaman.org\" target=\"_blank\" rel=\"noopener noreferrer\"><strong>Vardhaman College of Engineering</strong></a>"
   - icon: "graduation-cap"
     title: "Education"
-    value: "🏗️ <a href=\"https://uchile.cl/\" target=\"_blank\" rel=\"noopener noreferrer\">Anna University, Chennai</a>, **Ph.D in Electrical Engineering**<br>🤖 <a href=\"https://lasallecollege.lcieducation.com/en\" target=\"_blank\" rel=\"noopener noreferrer\">Collège LaSalle Montréal</a>, **AEC: Artificial Intelligence and Machine Learning**"
+    value: "💥 <a href=\"https://www.annauniv.edu/\" target=\"_blank\" rel=\"noopener noreferrer\">Anna University, Chennai</a>, **Ph.D in Electrical Engineering, 2017**<br>🤖 <a href=\"https://www.bitsathy.ac.in/\" target=\"_blank\" rel=\"noopener noreferrer\">Bannari Amman Institute of Technology</a>, **M.E. - Power Electronics and Drives, 2005**"
   - icon: "award"
-    title: "Recent Achievement"
-    value: "🏆 Recipient of the <a href=\"/blog/academic-excellence-recognition/\" target=\"_blank\" rel=\"noopener\">Academic Excellence Scholarship</a> 🎓 sponsored by ✈️ Air Canada at Collège LaSalle Montréal (2025) 🎉"
+    title: "Current Focus"
+    value: "💡 Developing research ideas and problem statements aligned with funded project frameworks in power electronics and energy systems.<br>📊 Exploring data science methods for modeling, analysis, and optimization of engineering systems."
   - icon: "language"
     title: "Languages"
     value: |
-      - 🇬🇧 English (IELTS C1)
-      - 🇪🇸 Spanish (Native)
-      - 🇫🇷 French (TCF B2)
+      - English
+      - Tamil
   - icon: "heart"
     title: "Interests"
     value: |
-      - ♟️ Chess
-      - 🎾 Tennis
       - 🚴 Cycling
-      - 🏊‍♂️ Swimming
-      - 👨‍🍳 Cooking
-      - 🥁 Drumming
       - 📸 Photography
       - ✈️ Traveling
-      - 📚 Reading
+      - 📚 Continuous learning
+      - ✍️ Technical writing
 ---
