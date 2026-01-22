@@ -129,23 +129,15 @@
     form.addEventListener('submit', async function (e) {
       e.preventDefault();
       
-      // Get Formspree endpoint from secure configuration
-      const formspreeEndpoint = window.FORMSPREE_ENDPOINT;
-      
-      if (!formspreeEndpoint) {
-        showToast('⚠️ Contact form not configured. Please try again later.');
-        return;
-      }
+      // Use PHP mail script (no external service needed)
+      const mailEndpoint = '{{ .Site.BaseURL }}send-mail.php';
       
       const formData = new FormData(form);
   
       try {
-        const response = await fetch(formspreeEndpoint, {
+        const response = await fetch(mailEndpoint, {
           method: 'POST',
-          body: formData,
-          headers: {
-            'Accept': 'application/json'
-          }
+          body: formData
         });
   
         if (response.ok) {

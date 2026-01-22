@@ -16,7 +16,7 @@
         <div class="sticky top-8 max-h-[calc(100vh-4rem)] flex flex-col">
           <div class="space-y-3 pr-2 overflow-y-auto flex-1 sidebar-scroll">
             {{ range .Pages.ByWeight }}
-            <a href="{{ .RelPermalink }}" class="block group">
+            <div onclick="window.location.href='{{ .RelPermalink }}'" class="block group cursor-pointer" style="cursor: pointer;">
               <article class="bg-bg-secondary dark:bg-bg-tertiary rounded-md p-3 shadow-sm border border-border-primary dark:border-border-primary hover:shadow-lg hover:bg-bg-tertiary dark:hover:bg-bg transition-all duration-200">
                 <!-- First row: Image and text in 2 columns -->
                 <div class="flex gap-3 mb-2">
@@ -55,14 +55,21 @@
                 {{ if .Params.tags }}
                 <div class="flex flex-wrap gap-1">
                   {{ range first 2 .Params.tags }}
+                  {{ $tagPage := $.Site.GetPage (printf "tags/%s" (. | urlize)) }}
+                  {{ if $tagPage }}
+                  <a href="{{ $tagPage.RelPermalink }}" onclick="event.stopPropagation();" class="bg-gradient-to-r from-primary-lighter to-primary-light dark:from-primary-dark dark:to-primary text-text-primary dark:text-text-primary px-2 py-0.5 rounded-full text-xs font-medium border border-primary-light dark:border-primary hover:scale-105 transition-transform">
+                    {{ . }}
+                  </a>
+                  {{ else }}
                   <span class="bg-gradient-to-r from-primary-lighter to-primary-light dark:from-primary-dark dark:to-primary text-text-primary dark:text-text-primary px-2 py-0.5 rounded-full text-xs font-medium border border-primary-light dark:border-primary">
                     {{ . }}
                   </span>
                   {{ end }}
+                  {{ end }}
                 </div>
                 {{ end }}
               </article>
-            </a>
+            </div>
             {{ end }}
           </div>
         </div>
@@ -79,7 +86,7 @@
     <!-- Enhanced grid with better visual design -->
     <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3">
       {{ range .Pages.ByWeight }}
-      <a href="{{ .RelPermalink }}" class="block group">
+      <div onclick="window.location.href='{{ .RelPermalink }}'" class="block group cursor-pointer" style="cursor: pointer;">
         <article class="bg-gradient-to-br from-bg-secondary to-bg-tertiary dark:from-bg-secondary dark:to-bg-tertiary rounded-xl shadow-md hover:shadow-xl h-full border border-border-primary dark:border-border-primary overflow-hidden project-card card-hover-interactive" data-animate>
           {{ if .Params.featured_image }}
           <div class="relative overflow-hidden">
@@ -115,9 +122,16 @@
             {{ if .Params.tags }}
             <div class="flex flex-wrap gap-2">
               {{ range .Params.tags }}
+              {{ $tagPage := $.Site.GetPage (printf "tags/%s" (. | urlize)) }}
+              {{ if $tagPage }}
+              <a href="{{ $tagPage.RelPermalink }}" onclick="event.stopPropagation();" class="bg-gradient-to-r from-primary-lighter to-primary-light dark:from-primary-dark dark:to-primary text-text-primary dark:text-text-primary px-3 py-1 rounded-full text-xs font-medium border border-primary-light dark:border-primary transition-all duration-300 hover:scale-105">
+                {{ . }}
+              </a>
+              {{ else }}
               <span class="bg-gradient-to-r from-primary-lighter to-primary-light dark:from-primary-dark dark:to-primary text-text-primary dark:text-text-primary px-3 py-1 rounded-full text-xs font-medium border border-primary-light dark:border-primary transition-all duration-300 hover:scale-105">
                 {{ . }}
               </span>
+              {{ end }}
               {{ end }}
             </div>
             {{ end }}
@@ -129,7 +143,7 @@
             </div>
           </div>
         </article>
-      </a>
+      </div>
       {{ end }}
     </div>
     

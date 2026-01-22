@@ -23,7 +23,7 @@
           <div class="space-y-3 pr-2 overflow-y-auto flex-1 sidebar-scroll">
             {{ $related := .Site.RegularPages.Related . | first 8 }}
             {{ range $related }}
-            <a href="{{ .RelPermalink }}" class="block group">
+            <div onclick="window.location.href='{{ .RelPermalink }}'" class="block group cursor-pointer" style="cursor: pointer;">
               <article class="bg-bg-secondary dark:bg-bg-tertiary rounded-md p-3 shadow-sm border border-border-primary dark:border-border-primary hover:shadow-md transition-shadow duration-200">
                 <!-- First row: Image and text in 2 columns -->
                 <div class="flex gap-3 mb-2">
@@ -62,14 +62,21 @@
                 {{ if .Params.tags }}
                 <div class="flex flex-wrap gap-1">
                   {{ range first 3 .Params.tags }}
+                  {{ $tagPage := $.Site.GetPage (printf "tags/%s" (. | urlize)) }}
+                  {{ if $tagPage }}
+                  <a href="{{ $tagPage.RelPermalink }}" onclick="event.stopPropagation();" class="bg-bg dark:bg-bg-secondary text-text-primary dark:text-text-primary px-1.5 py-0.5 rounded text-xs border border-border-primary dark:border-border-primary hover:bg-primary-lighter dark:hover:bg-primary-dark transition-colors">
+                    {{ . }}
+                  </a>
+                  {{ else }}
                   <span class="bg-bg dark:bg-bg-secondary text-text-primary dark:text-text-primary px-1.5 py-0.5 rounded text-xs border border-border-primary dark:border-border-primary">
                     {{ . }}
                   </span>
                   {{ end }}
+                  {{ end }}
                 </div>
                 {{ end }}
               </article>
-            </a>
+            </div>
             {{ end }}
           </div>
         </div>
