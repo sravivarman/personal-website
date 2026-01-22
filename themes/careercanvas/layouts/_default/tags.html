@@ -1,0 +1,53 @@
+{{ define "main" }}
+<section class="py-12 bg-bg dark:bg-bg" data-animate>
+  <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+    <h1 class="text-4xl font-bold text-center mb-4 font-heading text-text-primary dark:text-text-primary">
+      <i class="fas fa-tags mr-3 text-primary"></i>Tags
+    </h1>
+    <p class="text-center text-text-secondary dark:text-text-secondary mb-12">Explore content by topic</p>
+    
+    <!-- Tag Cloud -->
+    <div class="bg-bg-secondary dark:bg-bg-secondary rounded-xl p-8 shadow-md border border-border-primary dark:border-border-primary mb-8">
+      <div class="flex flex-wrap gap-3 justify-center">
+        {{ range .Site.Taxonomies.tags.ByCount }}
+        {{ $fontSize := add 0.75 (mul (div (float .Count) 10.0) 0.5) }}
+        {{ if gt $fontSize 1.5 }}{{ $fontSize = 1.5 }}{{ end }}
+        <a href="{{ .Page.RelPermalink }}" 
+           class="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-primary-lighter to-primary-light dark:from-primary-dark dark:to-primary text-text-primary dark:text-text-primary rounded-full border border-primary-light dark:border-primary hover:scale-105 transition-transform duration-200"
+           style="font-size: {{ $fontSize }}rem;">
+          <i class="fas fa-tag text-primary dark:text-primary-light"></i>
+          {{ .Page.Title }}
+          <span class="bg-primary text-white px-2 py-0.5 rounded-full text-xs">{{ .Count }}</span>
+        </a>
+        {{ end }}
+      </div>
+    </div>
+    
+    <!-- Tags List -->
+    <div class="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+      {{ range .Site.Taxonomies.tags.ByCount }}
+      <a href="{{ .Page.RelPermalink }}" class="block group" style="cursor: pointer;">
+        <div class="bg-bg-secondary dark:bg-bg-secondary rounded-lg p-4 shadow-sm hover:shadow-md border border-border-primary dark:border-border-primary transition-all duration-200 flex items-center justify-between">
+          <div class="flex items-center gap-3">
+            <div class="bg-primary-lighter dark:bg-primary-dark p-2 rounded-full">
+              <i class="fas fa-hashtag text-primary dark:text-primary-light"></i>
+            </div>
+            <span class="font-medium text-text-primary dark:text-text-primary group-hover:text-primary dark:group-hover:text-primary-light transition-colors">{{ .Page.Title }}</span>
+          </div>
+          <span class="bg-primary-lighter dark:bg-primary-dark text-primary dark:text-primary-light px-3 py-1 rounded-full text-sm font-medium">
+            {{ .Count }}
+          </span>
+        </div>
+      </a>
+      {{ end }}
+    </div>
+    
+    {{ if eq (len .Site.Taxonomies.tags) 0 }}
+    <div class="text-center py-12">
+      <i class="fas fa-tags text-6xl text-text-tertiary dark:text-text-tertiary mb-4"></i>
+      <p class="text-text-secondary dark:text-text-secondary">No tags yet.</p>
+    </div>
+    {{ end }}
+  </div>
+</section>
+{{ end }}

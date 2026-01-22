@@ -73,6 +73,8 @@ sectionPagesMenu = 'main'
 
 [taxonomies]
   tag = "tags"
+  category = "categories"
+  series = "series"
 
 [markup]
   [markup.goldmark]

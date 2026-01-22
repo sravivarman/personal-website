@@ -1,0 +1,67 @@
+{{ define "main" }}
+<section class="py-12 bg-bg dark:bg-bg" data-animate>
+  <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+    <h1 class="text-4xl font-bold text-center mb-4 font-heading text-text-primary dark:text-text-primary">
+      <i class="fas fa-archive mr-3 text-primary"></i>Archives
+    </h1>
+    <p class="text-center text-text-secondary dark:text-text-secondary mb-12">All posts organized by date</p>
+    
+    {{ $pages := where .Site.RegularPages "Section" "ne" "" }}
+    {{ $years := slice }}
+    {{ range $pages }}
+      {{ $year := .Date.Format "2006" }}
+      {{ if not (in $years $year) }}
+        {{ $years = $years | append $year }}
+      {{ end }}
+    {{ end }}
+    
+    <div class="space-y-8">
+      {{ range sort $years "value" "desc" }}
+        {{ $year := . }}
+        {{ $yearPages := where $pages "Date.Year" (int $year) }}
+        <div class="bg-bg-secondary dark:bg-bg-secondary rounded-xl p-6 shadow-md border border-border-primary dark:border-border-primary">
+          <h2 class="text-2xl font-bold mb-6 text-primary dark:text-primary-light flex items-center">
+            <i class="fas fa-calendar-alt mr-3"></i>{{ $year }}
+            <span class="ml-3 text-sm font-normal text-text-secondary dark:text-text-secondary">({{ len $yearPages }} posts)</span>
+          </h2>
+          
+          <div class="space-y-4">
+            {{ range $yearPages.ByDate.Reverse }}
+            <div class="flex items-start gap-4 p-4 bg-bg dark:bg-bg rounded-lg hover:shadow-md transition-shadow duration-200 border border-border-primary dark:border-border-primary" style="cursor: pointer;" onclick="window.location.href='{{ .RelPermalink }}'">
+              <div class="flex-shrink-0 w-20 text-center">
+                <div class="bg-primary-lighter dark:bg-primary-dark rounded-lg p-2">
+                  <span class="text-sm font-medium text-primary dark:text-primary-light">{{ .Date.Format "Jan 02" }}</span>
+                </div>
+              </div>
+              <div class="flex-1 min-w-0">
+                <h3 class="text-lg font-semibold text-text-primary dark:text-text-primary hover:text-primary dark:hover:text-primary-light transition-colors">
+                  {{ .Title }}
+                </h3>
+                {{ if .Description }}
+                <p class="text-sm text-text-secondary dark:text-text-secondary mt-1 line-clamp-2">{{ .Description }}</p>
+                {{ end }}
+                <div class="flex flex-wrap gap-2 mt-2">
+                  {{ range first 3 .Params.tags }}
+                  <span class="text-xs px-2 py-0.5 bg-primary-lighter dark:bg-primary-dark text-primary dark:text-primary-light rounded-full">{{ . }}</span>
+                  {{ end }}
+                </div>
+              </div>
+              <div class="flex-shrink-0 text-text-tertiary dark:text-text-tertiary">
+                <i class="fas fa-chevron-right"></i>
+              </div>
+            </div>
+            {{ end }}
+          </div>
+        </div>
+      {{ end }}
+    </div>
+    
+    {{ if eq (len $pages) 0 }}
+    <div class="text-center py-12">
+      <i class="fas fa-inbox text-6xl text-text-tertiary dark:text-text-tertiary mb-4"></i>
+      <p class="text-text-secondary dark:text-text-secondary">No posts yet. Check back later!</p>
+    </div>
+    {{ end }}
+  </div>
+</section>
+{{ end }}

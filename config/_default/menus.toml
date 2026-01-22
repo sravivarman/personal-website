@@ -4,11 +4,6 @@ url = "/#about"
 weight = 2
 
 [[main]]
-name = "Contact"
-url = "/contact/"
-weight = 100
-
-[[main]]
 name = "Blog"
 url = "/blog/"
 weight = 60
@@ -24,4 +19,29 @@ name = "Contributions"
 url = "/contributions/"
 weight = 51
 pre = "contributions"
+
+[[main]]
+name = "Archives"
+url = "/archives/"
+weight = 70
+
+[[main]]
+name = "Categories"
+url = "/categories/"
+weight = 71
+
+[[main]]
+name = "Tags"
+url = "/tags/"
+weight = 72
+
+[[main]]
+name = "Series"
+url = "/series/"
+weight = 73
+
+[[main]]
+name = "Contact"
+url = "/contact/"
+weight = 100
 

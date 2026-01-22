@@ -1,0 +1,79 @@
+{{ define "main" }}
+<section class="py-12 bg-bg dark:bg-bg" data-animate>
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <!-- Header with taxonomy type and term -->
+    <div class="text-center mb-12">
+      {{ $icon := "tag" }}
+      {{ if eq .Data.Singular "category" }}{{ $icon = "folder" }}{{ end }}
+      {{ if eq .Data.Singular "series" }}{{ $icon = "layer-group" }}{{ end }}
+      
+      <div class="inline-flex items-center gap-2 bg-primary-lighter dark:bg-primary-dark px-4 py-2 rounded-full mb-4">
+        <i class="fas fa-{{ $icon }} text-primary dark:text-primary-light"></i>
+        <span class="text-sm font-medium text-primary dark:text-primary-light capitalize">{{ .Data.Singular }}</span>
+      </div>
+      
+      <h1 class="text-4xl font-bold font-heading text-text-primary dark:text-text-primary">
+        {{ .Title }}
+      </h1>
+      <p class="text-text-secondary dark:text-text-secondary mt-2">
+        {{ len .Pages }} {{ if eq (len .Pages) 1 }}post{{ else }}posts{{ end }} in this {{ .Data.Singular }}
+      </p>
+    </div>
+    
+    <!-- Posts Grid -->
+    <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+      {{ range .Pages.ByDate.Reverse }}
+      <div onclick="window.location.href='{{ .RelPermalink }}'" class="block group cursor-pointer" style="cursor: pointer;">
+        <article class="bg-gradient-to-br from-bg-secondary to-bg-tertiary dark:from-bg-secondary dark:to-bg-tertiary rounded-xl shadow-md hover:shadow-xl h-full border border-border-primary dark:border-border-primary overflow-hidden transition-all duration-300">
+          {{ if .Params.featured_image }}
+          <div class="relative overflow-hidden">
+            <img 
+              src="{{ .Params.featured_image }}" 
+              alt="{{ .Title }}" 
+              class="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-105"
+              loading="lazy"
+            >
+          </div>
+          {{ else }}
+          <div class="h-32 bg-gradient-primary-lighter flex items-center justify-center">
+            <i class="fas fa-file-alt text-4xl text-primary"></i>
+          </div>
+          {{ end }}
+          
+          <div class="p-6">
+            <div class="flex items-center gap-2 text-xs text-text-tertiary dark:text-text-tertiary mb-2">
+              <i class="fas fa-calendar"></i>
+              <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "Jan 02, 2006" }}</time>
+            </div>
+            
+            <h2 class="text-lg font-semibold mb-2 text-text-primary dark:text-text-primary group-hover:text-primary dark:group-hover:text-primary-light transition-colors">
+              {{ .Title }}
+            </h2>
+            
+            {{ if .Description }}
+            <p class="text-text-secondary dark:text-text-secondary text-sm line-clamp-2">{{ .Description }}</p>
+            {{ end }}
+            
+            {{ if .Params.tags }}
+            <div class="flex flex-wrap gap-1 mt-3">
+              {{ range first 3 .Params.tags }}
+              <span class="text-xs px-2 py-0.5 bg-primary-lighter dark:bg-primary-dark text-primary dark:text-primary-light rounded-full">{{ . }}</span>
+              {{ end }}
+            </div>
+            {{ end }}
+          </div>
+        </article>
+      </div>
+      {{ end }}
+    </div>
+    
+    <!-- Back link -->
+    <div class="text-center mt-12">
+      <a href="{{ .Data.Plural | relURL }}" class="inline-flex items-center gap-2 text-primary dark:text-primary-light hover:underline">
+        <i class="fas fa-arrow-left"></i>
+        <span>View all {{ .Data.Plural }}</span>
+      </a>
+    </div>
+  </div>
+</section>
+{{ end }}
