@@ -5,6 +5,7 @@ draft: false
 description: "Exploring the development of an automated real-time slab deflection analysis tool that combines BIM data with structural engineering principles."
 featured_image: "/images/blog/2025-05-18_21-09 - obralink_slabs .png"
 tags: ["bim", "python", "structural-engineering", "automation", "construction-technology", "real-time-analysis"]
+series: ["Series Name"]
 ---
 
 🔧 Real-time information about slab deflections during construction? Yes, it's possible—and I developed it! At <a href="https://obralink.com" target="_blank" rel="noopener">ObraLink</a>, I led the design and implementation of a new functionality that automatically analyzes slab deflections in real-time using BIM data and sensors. No manual modeling. No delays. Just key structural information, precisely when needed.

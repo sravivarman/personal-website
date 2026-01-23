@@ -5,6 +5,7 @@ draft: false
 description: "Welcome to my blog where I share my journey of creating this website using Hugo and the CareerCanvas theme, along with insights about structural engineering, software development, and AI in construction."
 # featured_image: "/images/personal_web_demo.png"
 tags: ["blog", "welcome", "hugo", "web-development", "careercanvas"]
+series: ["Series_Name"]
 ---
 
 Welcome to my blog! I'm excited to share my journey of creating this website and the experiences that led me here. As a structural engineer with a passion for software development, I wanted a platform that could effectively showcase both my technical expertise and professional experience.

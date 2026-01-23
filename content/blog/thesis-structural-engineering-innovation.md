@@ -5,6 +5,7 @@ draft: false
 description: "Exploring my thesis research on the seismic performance of reinforced concrete wall structures commonly found in Chile, using advanced fiber models and time-history analyses to understand structural behavior under earthquake loads."
 featured_image: "/images/thesis/thesis_image.png"
 tags: ["thesis", "structural-engineering", "seismic-analysis", "reinforced-concrete", "chile", "earthquake-engineering", "fiber-models", "research"]
+series: ["Series_Name"]
 ---
 
 My thesis research focused on a critical aspect of structural engineering that directly impacts the safety of millions of people: the seismic performance of reinforced concrete (RC) wall structures commonly found in Chile. This comprehensive study utilized advanced computational methods to understand how these structures behave under earthquake loads and identify key factors that influence their performance.

@@ -3,6 +3,7 @@ title: "Concrete Beam Designer"
 description: "A modern web application for concrete beam analysis and design, featuring load analysis, support configurations, and interactive visualizations."
 featured_image: "/images/beams_demo_image.png"
 tags: ["structural-engineering", "design-tools", "concrete-design", "python", "streamlit", "beam-analysis"]
+series: ["Series_Name"]
 ---
 
 
