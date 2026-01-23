@@ -5,6 +5,7 @@ draft: false
 description: "A heartwarming story of transforming abstract mathematics into an interactive learning app, exploring how coding can make education more engaging and accessible for children."
 featured_image: "/images/blog/mathbook/maths.jpeg"
 tags: ["education", "coding", "mathematics", "interactive-learning", "parenting", "stem", "visual-learning"]
+series: ["Series Name"]
 ---
 
 "Vicente, want to see how we can make an app from these concepts?"

@@ -8,7 +8,7 @@
     
     <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
       {{ range .Site.Taxonomies.categories.ByCount }}
-      <a href="{{ .Page.RelPermalink }}" class="block group">
+      <div onclick="window.location.href='{{ .Page.RelPermalink | safeJS }}'" class="block group cursor-pointer" style="cursor: pointer;">
         <div class="bg-gradient-to-br from-bg-secondary to-bg-tertiary dark:from-bg-secondary dark:to-bg-tertiary rounded-xl p-6 shadow-md hover:shadow-xl border border-border-primary dark:border-border-primary transition-all duration-300 h-full">
           <div class="flex items-center justify-between mb-4">
             <div class="bg-primary-lighter dark:bg-primary-dark p-3 rounded-full">
@@ -26,7 +26,7 @@
             <i class="fas fa-arrow-right ml-2"></i>
           </div>
         </div>
-      </a>
+      </div>
       {{ end }}
     </div>
     

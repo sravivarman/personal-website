@@ -8,7 +8,7 @@
     
     <div class="grid gap-6 md:grid-cols-2">
       {{ range .Site.Taxonomies.series.ByCount }}
-      <a href="{{ .Page.RelPermalink }}" class="block group">
+      <div onclick="window.location.href='{{ .Page.RelPermalink | safeJS }}'" class="block group cursor-pointer" style="cursor: pointer;">
         <div class="bg-gradient-to-br from-bg-secondary to-bg-tertiary dark:from-bg-secondary dark:to-bg-tertiary rounded-xl overflow-hidden shadow-md hover:shadow-xl border border-border-primary dark:border-border-primary transition-all duration-300 h-full">
           <div class="bg-gradient-primary p-4">
             <div class="flex items-center justify-between">
@@ -50,7 +50,7 @@
             </div>
           </div>
         </div>
-      </a>
+      </div>
       {{ end }}
     </div>
     

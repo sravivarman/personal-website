@@ -5,6 +5,7 @@ draft: false
 description: "Reflecting on receiving recognition for academic excellence from Air Canada during my graduation from the Artificial Intelligence and Machine Learning program at Collège LaSalle, Montréal."
 featured_image: "/images/blog/scholarship_letter.jpg"
 tags: ["academic", "ai", "machine-learning", "education", "personal-journey"]
+series: ["Series Name"]
 ---
 
 Receiving recognition for academic excellence from Air Canada during my graduation from the Artificial Intelligence and Machine Learning program at Collège LaSalle, Montréal has been an unforgettable and deeply emotional moment. This achievement represents not just academic success, but a testament to faith, family support, and perseverance.

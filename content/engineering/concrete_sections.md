@@ -3,6 +3,7 @@ title: "Reinforced Concrete Walls Sectional Analysis"
 description: "Advanced program for accurate analysis of composite wall sections with 3D interaction diagrams, reinforcement modification, and moment-curvature analysis."
 featured_image: "/images/album_sections/demo.png"
 tags: ["structural-engineering", "design-tools", "concrete-design", "section-analysis", "walls"]
+series: ["Series Name"]
 ---
 
 #### This program allows accurate analysis of sections of composite walls of any geometry, based on current regulations (DS 60). The following are determined:
